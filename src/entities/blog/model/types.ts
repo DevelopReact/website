@@ -1,26 +1,3 @@
-import type {Prisma} from '@/generated/prisma/client';
-
-// Extract types from Prisma payloads
-type BlogPost = Prisma.BlogPostGetPayload<object>;
-type BlogPostTranslation = Prisma.BlogPostTranslationGetPayload<object>;
-type BlogPostTag = Prisma.BlogPostTagGetPayload<object>;
-type Tag = Prisma.TagGetPayload<object>;
-type TagTranslation = Prisma.TagTranslationGetPayload<object>;
-type User = Prisma.UserGetPayload<object>;
-
-// Full blog post with all relations
-export type BlogPostWithRelations = BlogPost & {
-  author: User;
-  translations: BlogPostTranslation[];
-  tags: Array<
-    BlogPostTag & {
-      tag: Tag & {
-        translations: TagTranslation[];
-      };
-    }
-  >;
-};
-
 // Localized blog post for API responses
 export interface LocalizedBlogPost {
   id: string;
