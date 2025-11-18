@@ -1,0 +1,118 @@
+$card-min-width: 430px;
+$card-border-radius: 1rem;
+$card-overlay: linear-gradient(180deg, rgba(9, 12, 17, 0) 40%, rgba(9, 12, 17, 0.88) 100%);
+$cards-gap: 2rem;
+$title-spacing: 1.5rem;
+$mobile-scroll-padding: 1rem;
+
+.cardImage {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  transform-origin: center;
+  transition: transform var(--default-duration) var(--default-timing-function);
+}
+
+.cardBlurContent {
+  width: 100%;
+  height: calc(100% / 3);
+  padding: 12px 8px;
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: rgba(98, 98, 98, 0.3);
+  backdrop-filter: blur(3px);
+  overflow: hidden;
+}
+
+.contentWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 70%;
+  position: absolute;
+  left: 3rem;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  overflow: hidden;
+}
+
+.cardTitle {
+  font-size: 24px !important;
+  font-weight: bold !important;
+  color: var(--color-white) !important;
+}
+
+.cardDescription {
+  color: var(--color-white);
+  text-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.btn {
+  position: absolute;
+  inset: auto 2rem 1.5rem auto;
+  z-index: 1;
+}
+
+@media (max-width: 1050px) {
+  .cardDescription {
+    -webkit-line-clamp: 3;
+  }
+}
+
+@media (max-width: 991px) {
+  .cardTitle {
+    inset: auto 1.25rem 1.25rem 1.25rem;
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .cardTitle {
+    inset: auto 1rem 1rem 1rem;
+    font-size: 0.8125rem;
+  }
+
+  .mainPostCard {
+    min-width: 767px;
+    position: absolute;
+    inset: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .cardBlurContent {
+    width: 85vw;
+    left: 50%;
+    transform: translate(-58%);
+    height: calc(100% / 2);
+    border-radius: 1rem;
+    margin: 1rem;
+  }
+
+  .contentWrapper {
+    position: static;
+    max-width: 100%;
+    max-height: 80%;
+    transform: none;
+    overflow: hidden;
+  }
+
+  .cardDescription {
+    -webkit-line-clamp: unset;
+    -webkit-box-orient: unset;
+    text-overflow: ellipsis;
+  }
+
+  .btn {
+    inset: auto auto 12px 8px;
+  }
+}

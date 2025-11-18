@@ -1,0 +1,42 @@
+.overflow {
+  min-width: 0; //нужно, чтобы не было ограничений при сжатии
+  min-height: 0; //нужно, чтобы не было ограничений при сжатии
+
+  @include ellipsis-text-multiline(var(--lines, 1));
+
+  &_blur {
+    /* ДВА слоя маски */
+    -webkit-mask-image:
+      linear-gradient(#000, #000),
+      linear-gradient(
+        to right,
+        #000 0%,
+        #000 calc(var(--last-line-x) - var(--fade)),
+        transparent var(--last-line-x),
+        transparent 100%
+      );
+
+    mask-image:
+      linear-gradient(#000, #000),
+      linear-gradient(
+        to right,
+        #000 0%,
+        #000 calc(var(--last-line-x) - var(--fade)),
+        transparent var(--last-line-x),
+        transparent 100%
+      );
+
+    -webkit-mask-position: top, bottom;
+    mask-position: top, bottom;
+
+    -webkit-mask-repeat: no-repeat, no-repeat;
+    mask-repeat: no-repeat, no-repeat;
+
+    -webkit-mask-size:
+      100% calc(100% - (var(--mask-height, 0px) * var(--blur-enabled, 0))),
+      100% calc(var(--mask-height, 0px) * var(--blur-enabled, 0));
+    mask-size:
+      100% calc(100% - (var(--mask-height, 0px) * var(--blur-enabled, 0))),
+      100% calc(var(--mask-height, 0px) * var(--blur-enabled, 0));
+  }
+}

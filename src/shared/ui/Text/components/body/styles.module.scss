@@ -1,0 +1,75 @@
+.body {
+  display: inline-block;
+
+  &.level-1 {
+    @include set-typography(
+      (
+        font-family: var(--font-family),
+        font-weight: var(--font-weight-regular),
+        font-size: var(--font-size-2xl),
+        line-height: var(--line-height-4xl),
+        letter-spacing: var(--letter-spacing-none),
+      )
+    );
+  }
+
+  &.level-2 {
+    @include set-typography(
+      (
+        font-family: var(--font-family),
+        font-weight: var(--font-weight-regular),
+        font-size: var(--font-size-xl),
+        line-height: var(--line-height-3xl),
+        letter-spacing: var(--letter-spacing-none),
+      )
+    );
+  }
+
+  &.level-3 {
+    @include set-typography(
+      (
+        font-family: var(--font-family),
+        font-weight: var(--font-weight-regular),
+        font-size: var(--font-size-l),
+        line-height: var(--line-height-2xl),
+        letter-spacing: var(--letter-spacing-none),
+      )
+    );
+  }
+
+  &.level-4 {
+    @include set-typography(
+      (
+        font-family: var(--font-family),
+        font-weight: var(--font-weight-regular),
+        font-size: var(--font-size-m),
+        line-height: var(--line-height-xl),
+        letter-spacing: var(--letter-spacing-none),
+      )
+    );
+  }
+
+  &.level-5 {
+    @include set-typography(
+      (
+        font-family: var(--font-family),
+        font-weight: var(--font-weight-regular),
+        font-size: var(--font-size-s),
+        line-height: var(--line-height-l),
+        letter-spacing: var(--letter-spacing-none),
+      )
+    );
+  }
+
+  &.level-6 {
+    @include set-typography(
+      (
+        font-family: var(--font-family),
+        font-weight: var(--font-weight-regular),
+        font-size: var(--font-size-xs),
+        line-height: var(--line-height-m),
+        letter-spacing: var(--letter-spacing-none),
+      )
+    );
+  }
+}

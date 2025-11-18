@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 500 500">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #5f5f5f;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-3 {
+        fill: #717171;
+      }
+    </style>
+  </defs>
+  <!-- Generator: Adobe Illustrator 28.7.1, SVG Export Plug-In . SVG Version: 1.2.0 Build 142)  -->
+  <g>
+    <g id="_Слой_1" data-name="Слой_1">
+      <g>
+        <path class="cls-1" d="M71.6,444L35.7,5.4l428.6.9-37.9,437.7-174.7,50.6-180-50.6Z"/>
+        <path class="cls-3" d="M251.6,452.2V47.2l176.5.6-31.5,362.4-145,42.1Z"/>
+        <path class="cls-2" d="M379.6,148.4l5-53.5H113.1l15,164.1h187.4l-7.3,70-60,16.2-60.9-17.6-3.2-41.8h-53.8l7.4,85.3,110.6,30.9,111.5-30.9,15-166.5h-196.8l-5.6-56.2h207.4Z"/>
+      </g>
+    </g>
+  </g>
+</svg>

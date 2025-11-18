@@ -1,0 +1,4 @@
+:root {
+  --default-duration: 200ms;
+  --default-timing-function: ease-in-out;
+}

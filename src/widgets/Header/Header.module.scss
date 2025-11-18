@@ -1,0 +1,153 @@
+.wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  padding: 1.5rem 2rem 1rem 2rem;
+  z-index: 1000;
+
+  transition: background-color var(--default-duration) var(--default-timing-function);
+
+  &--withBg {
+    background-color: var(--color-white);
+  }
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+
+  @media (min-width: 992px) {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+  }
+}
+
+.logo {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  height: 52px;
+  margin-right: 70px;
+}
+
+.navWrapper {
+  display: none;
+
+  @media (min-width: 992px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    justify-self: center;
+    padding: 0 1.5rem;
+    width: 100%;
+  }
+}
+
+.navigation {
+  width: 100%;
+}
+
+.navDivider {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  max-width: 395px;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.75);
+  transition: transform 0.1s ease-out;
+}
+
+.langSwitcher {
+  display: none;
+
+  @media (min-width: 992px) {
+    display: inline-flex;
+    justify-self: end;
+    padding: 0;
+  }
+}
+
+.menu {
+  position: fixed;
+  top: 76px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-white);
+  z-index: 1001;
+
+  &Tablet {
+    width: 100%;
+    flex-flow: column;
+    align-items: center;
+    justify-content: flex-start;
+    overflow-y: hidden;
+  }
+}
+
+.navTablet {
+  width: 100%;
+  flex-flow: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0;
+  gap: 1rem;
+}
+
+.content {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: flex-start;
+
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 100%);
+  padding-right: 10px;
+}
+
+.contactButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500 !important;
+
+  &--absolute {
+    position: absolute;
+    top: 1.75rem;
+    right: 4rem;
+  }
+}
+
+.imgWrapper {
+  position: relative;
+  width: 18px;
+  height: 18px;
+}
+
+.contactIcon {
+}
+
+@media (max-width: 991px) {
+  .wrapper {
+    padding: 1rem;
+  }
+
+  .container {
+    justify-content: space-between;
+  }
+
+  .logo {
+    height: 44px;
+  }
+}

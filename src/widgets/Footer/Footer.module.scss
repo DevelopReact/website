@@ -1,0 +1,151 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  background-color: var(--color-background-footer);
+  color: var(--color-white);
+  justify-content: center;
+  width: 100%;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 5rem 5rem 3.25rem;
+  max-width: 90rem;
+  width: 100%;
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.col:nth-child(1) {
+  justify-self: start;
+  align-self: start;
+}
+
+.col:nth-child(2) {
+  justify-self: center;
+  align-self: center;
+}
+
+.col:nth-child(3) {
+  justify-self: end;
+  align-self: end;
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+
+  img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+  }
+}
+
+.description {
+  max-width: 28rem;
+  color: var(--color-white);
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.link {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+}
+
+.linkText {
+  text-decoration: none;
+  color: var(--color-white);
+
+  @include hover {
+    text-decoration: underline !important;
+  }
+}
+
+.office {
+  color: var(--color-white);
+  max-width: 16.3rem;
+}
+
+.bottomContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 4rem;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.iconLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  display: block;
+}
+
+@include media($lg) {
+  .container {
+    padding: 3rem 2rem 2.5rem;
+  }
+
+  .inner {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+
+  .col {
+    width: 100%;
+  }
+
+  .col:nth-child(1),
+  .col:nth-child(2),
+  .col:nth-child(3) {
+    justify-self: stretch;
+    align-self: stretch;
+  }
+
+  .links {
+    gap: 1.25rem;
+  }
+
+  .socials {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .bottomContent {
+    width: 100%;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}

@@ -1,0 +1,60 @@
+$card-min-width: 430px;
+$card-border-radius: 1rem;
+$card-overlay: linear-gradient(180deg, rgba(9, 12, 17, 0) 40%, rgba(9, 12, 17, 0.88) 100%);
+$cards-gap: 2rem;
+$title-spacing: 1.5rem;
+$mobile-scroll-padding: 1rem;
+
+.card {
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: $card-overlay;
+  }
+
+  @include hover {
+    cursor: pointer;
+    & .cardImage {
+      transform: scale(1.05);
+    }
+  }
+}
+
+.contentWrapper {
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  color: var(--color-white);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.cardImage {
+  position: absolute;
+  inset: 0;
+  transition: transform 0.4s ease;
+  will-change: transform;
+}
+
+.cardFooter {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cardFooterWrap {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.cardBoldTitle {
+  font-weight: bold !important;
+}
+
+.cardLightTitle {
+  font-weight: 200 !important;
+}

@@ -1,0 +1,62 @@
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  text-align: center;
+  flex-wrap: nowrap;
+}
+
+.navLink {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem 0;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  letter-spacing: 0.12em;
+  font-weight: var(--font-weight-medium);
+  color: rgba(0, 0, 0, 0.6);
+  transition: color 0.2s ease-in-out;
+  white-space: nowrap;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -4px;
+    width: 0;
+    height: 1px;
+    background-color: transparent;
+    transform: translateX(-50%);
+    transition:
+      width 0.2s ease-in-out,
+      background-color 0.2s ease-in-out;
+  }
+
+  &--active,
+  &[aria-current='page'] {
+    color: var(--color-black);
+
+    &::after {
+      width: 100%;
+      background-color: var(--color-black);
+    }
+  }
+
+  @include hover {
+    color: var(--color-black);
+
+    &::after {
+      width: 100%;
+      background-color: var(--color-black);
+    }
+  }
+}
+
+.email {
+  text-transform: none;
+  letter-spacing: normal;
+}

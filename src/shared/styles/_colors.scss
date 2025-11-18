@@ -1,0 +1,83 @@
+//actual
+$white: #ffffff;
+$black: #000000;
+$gray: #b5b5b5;
+$light-gray: #d9d9d980;
+
+$green: #05ae13;
+$red: #ba0404;
+$red-error: #d90202;
+$orange: #f38b00;
+$blue: #1b11da;
+
+$primary: $blue;
+
+//button colors
+//blue-button
+$button-primary-default-bg: $primary;
+$button-primary-default-color: $white;
+$button-primary-default-border: $primary;
+
+$button-primary-hover-bg: darken($primary, 5%);
+$button-primary-hover-color: $white;
+$button-primary-hover-border: darken($primary, 5%);
+
+$button-primary-active-bg: darken($primary, 10%);
+$button-primary-active-color: $white;
+$button-primary-active-border: darken($primary, 10%);
+
+$button-primary-focus-bg: $white;
+$button-primary-focus-color: $blue;
+$button-primary-focus-border: $blue;
+
+$button-primary-disabled-bg: darken(#1e1e1e, 30%);
+$button-primary-disabled-color: darken(#1e1e1e, 30%);
+$button-primary-disabled-border: darken(#1e1e1e, 30%);
+
+//black/white button
+$button-primary-dark-default-bg: $black;
+$button-primary-dark-default-color: $white;
+$button-primary-dark-default-border: $black;
+
+$button-primary-dark-hover-bg: darken($black, 5%);
+$button-primary-dark-hover-color: $white;
+$button-primary-dark-hover-border: darken($black, 5%);
+
+$button-primary-dark-active-bg: darken($black, 10%);
+$button-primary-dark-active-color: $white;
+$button-primary-dark-active-border: darken($black, 10%);
+
+$button-primary-dark-focus-bg: $white;
+$button-primary-dark-focus-color: $black;
+$button-primary-dark-focus-border: $black;
+
+$button-primary-disabled-bg: darken(#1e1e1e, 30%);
+$button-primary-disabled-color: darken(#1e1e1e, 30%);
+$button-primary-disabled-border: darken(#1e1e1e, 30%);
+
+//inverse button (white/black)
+$button-primary-inverse-default-bg: $white;
+$button-primary-inverse-default-color: $black;
+$button-primary-inverse-default-border: $white;
+
+$button-primary-inverse-hover-bg: darken($white, 5%);
+$button-primary-inverse-hover-color: $black;
+$button-primary-inverse-hover-border: darken($white, 5%);
+
+$button-primary-inverse-active-bg: darken($white, 10%);
+$button-primary-inverse-active-color: $black;
+$button-primary-inverse-active-border: darken($white, 10%);
+
+$button-primary-inverse-focus-bg: $black;
+$button-primary-inverse-focus-color: $white;
+$button-primary-inverse-focus-border: $white;
+
+$button-primary-inverse-disabled-bg: darken(#1e1e1e, 30%);
+$button-primary-inverse-disabled-color: darken(#1e1e1e, 30%);
+$button-primary-inverse-disabled-border: darken(#1e1e1e, 30%);
+
+//text
+
+$text-primary: $black;
+$text-primary-error: $red-error;
+$text-primary-inverse: $white;

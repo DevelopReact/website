@@ -1,0 +1,19 @@
+.wrapper {
+  @include flex(flex, column, flex-start, flex-start);
+  gap: 0.375rem;
+  width: 350px;
+  background: rgb(255 255 255 / 35%);
+  padding: 25px 50px;
+  border-radius: 16px;
+}
+
+.input {
+  width: 100%;
+}
+
+.button {
+  width: 100%;
+  & > span {
+    text-transform: uppercase;
+  }
+}

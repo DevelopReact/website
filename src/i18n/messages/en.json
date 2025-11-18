@@ -1,0 +1,119 @@
+{
+  "Header": {
+    "services": "Services",
+    "case-studies": "Case Studies",
+    "products": "Products",
+    "projects": "Projects",
+    "blog": "Blog",
+    "about_us": "About us",
+    "careers": "Careers"
+  },
+  "Footer": {
+    "user_agreement": "User Agreement (Terms of Service)",
+    "description": "We develop plugins and integrations for BIM automation",
+    "privacy-policy": "Privacy policy",
+    "cookie-policy": "Cookie policy",
+    "copyright": "© 2025 Apibim SpA. All rights reserved",
+    "office": "Reñaca Nte. 265, Viña del Mar, Valparaíso, Chile",
+    "services": "SERVICES",
+    "case-studies": "CASE STUDIES",
+    "products": "PRODUCTS",
+    "blog": "BLOG",
+    "about_us": "ABOUT US",
+    "contact_us": "Contact us"
+  },
+  "Common": {
+    "brand": "API BIM",
+    "en": "English",
+    "es": "Spanish",
+    "switchLanguage": "Switch language"
+  },
+  "Home": {
+    "title": "Welcome to API BIM",
+    "description": "Welcome to API BIM",
+    "counter": "Counter value: {value}",
+    "increment": "Increment",
+    "decrement": "Decrement"
+  },
+  "Blog": {
+    "title": "APIBIM blog",
+    "description": "Stay up to date with platform insights, BIM development tips, and engineering automation stories from our team.",
+    "readMore": "Read more",
+    "publishedOn": "Published on",
+    "by": "By",
+    "tags": "Tags",
+    "relatedPosts": "Related posts",
+    "noPostsFound": "No blog posts found",
+    "loadMore": "Load more"
+  },
+  "SEO": {
+    "title": "API BIM — Modern Web Starter",
+    "description": "Welcome to API BIM",
+    "ogTitle": "API BIM Starter",
+    "ogDescription": "Kickstart your project with batteries included.",
+    "blogTitle": "Blog - API BIM",
+    "blogDescription": "Read our latest articles and insights"
+  },
+  "HeroSection": {
+    "title": "Turn BIM into a <green>PROFIT</green> tool, not an extra <red>EXPENSE</red>",
+    "subtitle": "We develop plugins and integrations that reduce costs and increase profitability",
+    "button": "Get Your Solution",
+    "contact": "Contact Us"
+  },
+  "ContactForm": {
+    "title": "Your ideas, our expertise.",
+    "subtitle": "Let's connect",
+    "firstName": "First name",
+    "lastName": "Last name",
+    "companyName": "Company name",
+    "workEmail": "Work email",
+    "message": "Message",
+    "attachFile": "Attach file(-s)",
+    "attachFileInfo": "Max 3 files up to 5MB each",
+    "attachFileFormats": "Formats: doc, docx, pdf, ppt, pptx",
+    "privacyPolicy": "Privacy policy",
+    "agreeToPrivacyPolicy": "I agree to the",
+    "submitForm": "Send",
+    "errors": {
+      "required": "This field is required",
+      "email": "Please enter a valid email address",
+      "fileSize": "File size should not exceed 5MB",
+      "fileType": "Invalid file type. Allowed: doc, docx, pdf, ppt, pptx",
+      "maxFiles": "Maximum 3 files allowed"
+    },
+    "success": {
+      "title": "Thank you!",
+      "message": "Your message has been sent successfully. We will contact you soon."
+    }
+  },
+  "TechnologiesSection": {
+    "title": "We use proven technologies to make your solution reliable",
+    "engineering": "Engineering",
+    "it": "IT"
+  },
+  "StagesSection": {
+    "title": "Stages of Cooperation",
+    "stage1Title": "Identifying Key Business Needs",
+    "stage1Description": "At this stage, we meet with your key specialists, deeply analyze current challenges, and propose proven methods to address them. The outcome is a detailed implementation plan, formulated as clear technical requirements.",
+    "stage2Title": "Development Kick-off",
+    "stage2Description": "We start by designing the digital architecture — creating a \"blueprint\" of the future solution. Then we move on to prototyping: developing and testing the first working version, which becomes the foundation for further development. This is an iterative process: from conceptual diagrams to a tangible prototype.",
+    "stage3Title": "Development",
+    "stage3Description": "We regularly release intermediate versions of the product so that you can evaluate progress and provide timely feedback to keep the project on track. Each build becomes more precise thanks to your input. This is not just development, but co-creation: we continuously gather your feedback to ensure the final product fully meets your business goals.",
+    "stage4Title": "Documentation",
+    "stage4Description": "Alongside development, we create a complete documentation package: from technical specifications to user-friendly manuals for end users. This includes step-by-step guides, usage examples, and answers to frequently asked questions — ensuring your team can comfortably adopt and work with the new tool.",
+    "stage5Title": "Delivery of Results",
+    "stage5Description": "After development is completed, we deliver the final plugin to you, including all necessary components: installation files, technical documentation, and user manuals. Further integration is fully adapted to your company's workflows and BIM models.",
+    "stage6Title": "Integration. Configuration. Support.",
+    "stage6Description": "Once the plugin is fully ready, we provide everything needed for operation: final build packages, complete documentation, and one year of guaranteed technical support. For 12 months, our specialists promptly fix any discovered issues and provide you with technical assistance.",
+    "contactButton": "Contact us!"
+  },
+  "OurSolutionsSection": {
+    "title": "Our <em>Solutions</em> are more valuable if you are...",
+    "item1title": "Architectural or Design Bureau",
+    "item2title": "Large Manufacturing Enterprise",
+    "item3title": "Medium-sized Manufacturing Enterprise",
+    "item4title": "Contractor or Builder",
+    "item5title": "Equipment Manufacturers",
+    "btn": "Find Out More ->"
+  }
+}

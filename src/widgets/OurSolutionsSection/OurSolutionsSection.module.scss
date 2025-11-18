@@ -1,0 +1,34 @@
+.container {
+  width: 100%;
+}
+
+.items {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.item {
+  width: 100%;
+  max-width: 30%;
+  flex-grow: 1;
+}
+
+.iconPlaceholder {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 1.5rem;
+}
+
+.itemTitle {
+  margin-bottom: 16px;
+}
+
+.btn {
+  width: 80%;
+  margin-top: auto;
+}

@@ -1,0 +1,32 @@
+// @font-face {
+//   font-family: "GT-Eesti-Pro";
+//   font-display: swap;
+//   src: url("../fonts/GTEestiProDisplay-Light.woff2") format("woff2"),
+//     url("../fonts/GTEestiProDisplay-Light.woff") format("woff");
+//   font-weight: 300;
+//   font-style: normal;
+// }
+// @font-face {
+//   font-family: "GT-Eesti-Pro";
+//   font-display: swap;
+//   src: url("../fonts/GTEestiProDisplay-Regular.woff2") format("woff2"),
+//     url("../fonts/GTEestiProDisplay-Regular.woff") format("woff");
+//   font-weight: 400;
+//   font-style: normal;
+// }
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/inter/Inter-VariableFont_opsz,wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/inter/Inter-Italic-VariableFont_opsz,wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}

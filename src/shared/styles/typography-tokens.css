@@ -1,0 +1,128 @@
+:root {
+  /** font-family **/
+  --font-family:
+    'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+    'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+    'Noto Color Emoji';
+
+  /** font-weight **/
+  --font-weight-thin: 100;
+  --font-weight-extralight: 200;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+  --font-weight-black: 900;
+
+  /** font-size **/
+  --font-size-xxs: 0.5714285714285714rem;
+  --font-size-xs: 0.7142857142857143rem;
+  --font-size-s: 0.8571428571428571rem;
+  --font-size-m: 1rem;
+  --font-size-l: 1.1428571428571428rem;
+  --font-size-xl: 1.2857142857142858rem;
+  --font-size-2xl: 1.4285714285714286rem;
+  --font-size-3xl: 1.5714285714285714rem;
+  --font-size-4xl: 1.7142857142857142rem;
+  --font-size-5xl: 1.8571428571428572rem;
+  --font-size-6xl: 2rem;
+  --font-size-7xl: 2.142857142857143rem;
+  --font-size-8xl: 2.2857142857142856rem;
+  --font-size-9xl: 2.4285714285714284rem;
+  --font-size-10xl: 2.5714285714285716rem;
+  --font-size-11xl: 2.7142857142857144rem;
+  --font-size-12xl: 2.857142857142857rem;
+  --font-size-13xl: 3rem;
+  --font-size-14xl: 3.142857142857143rem;
+  --font-size-15xl: 3.2857142857142856rem;
+  --font-size-16xl: 3.4285714285714284rem;
+  --font-size-17xl: 3.5714285714285716rem;
+  --font-size-18xl: 3.7142857142857144rem;
+  --font-size-19xl: 3.857142857142857rem;
+  --font-size-20xl: 4rem;
+  --font-size-21xl: 4.142857142857143rem;
+  --font-size-22xl: 4.285714285714286rem;
+  --font-size-23xl: 4.428571428571429rem;
+  --font-size-24xl: 4.571428571428571rem;
+
+  /** line-height **/
+  --line-height-xxs: 0.5714285714285714rem;
+  --line-height-xs: 0.7142857142857143rem;
+  --line-height-s: 0.8571428571428571rem;
+  --line-height-m: 1rem;
+  --line-height-l: 1.1428571428571428rem;
+  --line-height-xl: 1.2857142857142858rem;
+  --line-height-2xl: 1.4285714285714286rem;
+  --line-height-3xl: 1.5714285714285714rem;
+  --line-height-4xl: 1.7142857142857142rem;
+  --line-height-4xls: 1.7857142857142858rem;
+  --line-height-5xl: 1.8571428571428572rem;
+  --line-height-6xl: 2rem;
+  --line-height-7xl: 2.142857142857143rem;
+  --line-height-8xl: 2.2857142857142856rem;
+  --line-height-9xl: 2.4285714285714284rem;
+  --line-height-10xl: 2.5714285714285716rem;
+  --line-height-11xl: 2.7142857142857144rem;
+  --line-height-12xl: 2.857142857142857rem;
+  --line-height-13xl: 3rem;
+  --line-height-14xl: 3.142857142857143rem;
+  --line-height-15xl: 3.2857142857142856rem;
+  --line-height-16xl: 3.4285714285714284rem;
+  --line-height-17xl: 3.5714285714285716rem;
+  --line-height-18xl: 3.7142857142857144rem;
+  --line-height-19xl: 3.857142857142857rem;
+  --line-height-20xl: 4rem;
+  --line-height-21xl: 4.142857142857143rem;
+  --line-height-22xl: 4.285714285714286rem;
+  --line-height-23xl: 4.428571428571429rem;
+  --line-height-24xl: 4.571428571428571rem;
+
+  /** paragraph-spacing **/
+  --paragraph-spacing-none: 0rem;
+  --paragraph-spacing-xxs: 0.5714285714285714rem;
+  --paragraph-spacing-xs: 0.7142857142857143rem;
+  --paragraph-spacing-s: 0.8571428571428571rem;
+  --paragraph-spacing-m: 1rem;
+  --paragraph-spacing-l: 1.1428571428571428rem;
+  --paragraph-spacing-xl: 1.2857142857142858rem;
+  --paragraph-spacing-2xl: 1.4285714285714286rem;
+  --paragraph-spacing-3xl: 1.5714285714285714rem;
+  --paragraph-spacing-4xl: 1.7142857142857142rem;
+  --paragraph-spacing-5xl: 1.8571428571428572rem;
+  --paragraph-spacing-6xl: 2rem;
+  --paragraph-spacing-7xl: 2.142857142857143rem;
+  --paragraph-spacing-8xl: 2.2857142857142856rem;
+  --paragraph-spacing-9xl: 2.4285714285714284rem;
+  --paragraph-spacing-10xl: 2.5714285714285716rem;
+  --paragraph-spacing-11xl: 2.7142857142857144rem;
+  --paragraph-spacing-12xl: 2.857142857142857rem;
+  --paragraph-spacing-13xl: 3rem;
+  --paragraph-spacing-14xl: 3.142857142857143rem;
+  --paragraph-spacing-15xl: 3.2857142857142856rem;
+  --paragraph-spacing-16xl: 3.4285714285714284rem;
+  --paragraph-spacing-17xl: 3.5714285714285716rem;
+  --paragraph-spacing-18xl: 3.7142857142857144rem;
+  --paragraph-spacing-19xl: 3.857142857142857rem;
+  --paragraph-spacing-20xl: 4rem;
+  --paragraph-spacing-21xl: 4.142857142857143rem;
+  --paragraph-spacing-22xl: 4.285714285714286rem;
+  --paragraph-spacing-23xl: 4.428571428571429rem;
+  --paragraph-spacing-24xl: 4.571428571428571rem;
+
+  /** letter-spacing **/
+  --letter-spacing-none: 0rem;
+  --letter-spacing-xxs: 0.007142857249294009rem;
+  --letter-spacing-xs: 0.008928571428571428rem;
+  --letter-spacing-s: 0.014285714498588018rem;
+  --letter-spacing-m: 0.017857142857142856rem;
+  --letter-spacing-l: 0.021428572280066355rem;
+  --letter-spacing-xl: 0.028571428997176036rem;
+  --letter-spacing-2xl: 0.03571428571428571rem;
+  --letter-spacing-3xl: 0.04285714456013271rem;
+  --letter-spacing-4xl: 0.04999999914850507rem;
+  --letter-spacing-5xl: 0.05714285799435207rem;
+  --letter-spacing-6xl: 0.06428571258272443rem;
+  --letter-spacing-7xl: 0.07142857142857142rem;
+}

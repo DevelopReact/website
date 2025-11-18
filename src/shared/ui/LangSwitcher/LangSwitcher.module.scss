@@ -1,0 +1,60 @@
+.wrapper {
+  --dur: 200ms;
+  --ease: cubic-bezier(0.2, 0, 0, 1);
+
+  padding: 0.5rem;
+  @include flex(flex, row nowrap, center, center);
+  cursor: pointer;
+
+  position: relative;
+
+  &Row {
+    flex-flow: column nowrap;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  @include hover {
+    & path {
+      stroke: var(--color-black);
+    }
+  }
+}
+
+.menu {
+  position: absolute;
+  z-index: 100;
+  top: 100%;
+  left: 50%;
+  padding: 0.5rem 0;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 0.25rem;
+  background-color: #fff;
+  display: block;
+
+  &Row {
+    position: static;
+    width: 100%;
+    padding: 0;
+
+    &Inner {
+      padding: 0.5rem 0;
+      overflow-y: hidden;
+    }
+  }
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  & path {
+    transition: stroke var(--default-duration) var(--default-timing-function);
+    stroke: rgba(0, 0, 0, 0.6);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .menu {
+    transition: none !important;
+  }
+}

@@ -1,0 +1,154 @@
+$card-min-width: 430px;
+$card-border-radius: 1rem;
+$card-overlay: linear-gradient(180deg, rgba(9, 12, 17, 0) 40%, rgba(9, 12, 17, 0.88) 100%);
+$cards-gap: 2rem;
+$title-spacing: 1.5rem;
+$mobile-scroll-padding: 1rem;
+
+.section {
+  background-color: var(--color-white);
+}
+
+.wrapper {
+  padding: 3rem 1rem;
+}
+
+.wrapperBlog {
+  display: flex;
+  flex-direction: column;
+  padding: 132px 0;
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: $title-spacing;
+}
+
+.divider {
+  height: 1px;
+  width: 100%;
+  background-color: var(--color-light-gray-2);
+}
+
+.title {
+  color: var(--color-black);
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-12xl);
+  line-height: var(--line-height-12xl);
+  letter-spacing: var(--letter-spacing-none);
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+.titleHighlight {
+  font-style: italic;
+  font-weight: var(--font-weight-extralight);
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: $cards-gap;
+  padding: $mobile-scroll-padding;
+}
+
+.cards::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  position: relative;
+  flex: 1 1 calc(33.333% - $cards-gap);
+  min-width: 18rem;
+  aspect-ratio: 4 / 3;
+  border-radius: $card-border-radius;
+  overflow: hidden;
+  transition: transform var(--default-duration) var(--default-timing-function);
+}
+
+.mainPostCard {
+  position: relative;
+  flex-basis: 100%;
+  width: 100%;
+  aspect-ratio: 21 / 9;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+@media (max-width: 1439px) {
+  .wrapper {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 991px) {
+  .wrapper {
+    gap: 2.5rem;
+  }
+
+  .header {
+    gap: 1.25rem;
+  }
+
+  .title {
+    font-size: var(--font-size-10xl);
+    line-height: var(--line-height-10xl);
+    padding-bottom: 1rem;
+  }
+
+  .cards {
+    gap: 1.25rem;
+    padding: 0.75rem;
+  }
+
+  .card {
+    flex: 1 1 calc(50% - 1.25rem);
+    min-width: 15rem;
+    aspect-ratio: 4 / 3;
+  }
+
+  .mainPostCard {
+    aspect-ratio: 16 / 9;
+  }
+}
+
+@media (max-width: 767px) {
+  .wrapper {
+    gap: 2rem;
+    padding: 2rem 0.75rem;
+  }
+
+  .header {
+    gap: 1rem;
+  }
+
+  .title {
+    font-size: var(--font-size-7xl);
+    line-height: var(--line-height-8xl);
+  }
+
+  .cards {
+    gap: 1rem;
+    padding: 0.5rem;
+    justify-content: center;
+  }
+
+  .card {
+    flex: 1 1 100%;
+    min-width: 100%;
+    border-radius: 0.75rem;
+    min-width: 12rem;
+    aspect-ratio: 4 / 3;
+  }
+
+  .mainPostCard {
+    aspect-ratio: 4 / 6;
+    border-radius: none;
+    overflow: visible;
+  }
+}

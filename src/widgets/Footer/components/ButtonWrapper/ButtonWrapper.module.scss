@@ -1,0 +1,19 @@
+.wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.button {
+  display: flex;
+  justify-content: space-between !important;
+  flex-direction: row !important;
+
+  align-items: center !important;
+  min-width: 210px;
+  font-weight: 500 !important;
+}
+
+.icon {
+  display: block;
+}

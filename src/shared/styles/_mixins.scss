@@ -1,0 +1,306 @@
+@use 'colors' as *;
+@use 'variables' as *;
+@use 'functions' as *;
+@use 'sass:map';
+@use 'sass:list';
+
+//Media
+
+// Media
+@mixin media($size) {
+  @media screen and (max-width: $size) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: 1025px) {
+    @content;
+  }
+}
+
+@mixin mediaXL {
+  @media screen and (max-width: ($xl)) {
+    @content;
+  }
+}
+
+@mixin mediaLG {
+  @media screen and (max-width: ($lg)) {
+    @content;
+  }
+}
+
+@mixin mediaMD {
+  @media screen and (max-width: ($md)) {
+    @content;
+  }
+}
+
+@mixin mediaSM {
+  @media screen and (max-width: ($sm)) {
+    @content;
+  }
+}
+
+@mixin mediaXS {
+  @media screen and (max-width: ($xs)) {
+    @content;
+  }
+}
+
+// Resets
+@mixin resetButton {
+  padding: 0;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+@mixin resetUl {
+  padding: 0;
+  margin: 0;
+}
+
+@mixin resetLi {
+  list-style: none;
+}
+
+// # Helpers
+@mixin flex($d, $ff, $jus, $al) {
+  display: $d;
+  flex-flow: $ff;
+  justify-content: $jus;
+  align-items: $al;
+}
+
+@mixin fadeAnimation($duration: 0.2s, $mod: 'open') {
+  visibility: hidden;
+  opacity: 0;
+  transition:
+    visibility $duration,
+    opacity $duration;
+
+  &_#{$mod} {
+    visibility: visible;
+    opacity: 1;
+    transition:
+      visibility 0s,
+      opacity $duration;
+  }
+}
+
+@mixin square($size, $radius: 0) {
+  width: $size;
+  height: $size;
+
+  @if $radius != 0 {
+    border-radius: $radius;
+  }
+}
+
+// hidden scrollbar
+@mixin scrollbarHidden {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  & {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+@mixin scrollbarCustom($borderRadius: 4px, $width: 8px) {
+  &::-webkit-scrollbar {
+    width: $width;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: var(--color-black);
+    border-radius: $borderRadius;
+  }
+  &::-webkit-scrollbar-track {
+    background: var(--color-light-gray-2);
+    border-radius: $borderRadius;
+  }
+}
+
+@mixin scrollbarPage() {
+  @include scrollbarCustom(0px);
+}
+
+@mixin scrollbarBlock() {
+  @include scrollbarCustom(4px, 4px);
+}
+
+//
+@mixin fullWindowWidth($withPadding: false) {
+  width: calc(100% + (100vw - 100%));
+  margin-right: calc(((100vw - 100%) / -2));
+  margin-left: calc(((100vw - 100%) / -2));
+  @if $withPadding {
+    padding-right: calc(((100vw - 100%) / 2));
+    padding-left: calc(((100vw - 100%) / 2));
+  }
+}
+
+//
+@mixin hover() {
+  @media #{$cursor} {
+    &:hover {
+      @content;
+    }
+  }
+
+  @media #{$touch} {
+    &:active {
+      @content;
+    }
+  }
+}
+
+// Transforms
+@mixin transition($prop: all, $duration: 0.2s, $function: linear, $delay: 0s) {
+  transition: $prop $duration $function $delay;
+  will-change: $prop;
+}
+
+// =============================================================================
+// String Replace (https://gist.github.com/jonathantneal/d0460e5c2d5d7f9bc5e6)
+// =============================================================================
+
+@function str-replace($string, $search, $replace: '') {
+  $index: str-index($string, $search);
+
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace +
+      str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+  }
+
+  @return $string;
+}
+
+// =============================================================================
+// Font Face (https://gist.github.com/jonathantneal/d0460e5c2d5d7f9bc5e6)
+// =============================================================================
+
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
+  $src: null;
+
+  $extmods: (
+    eot: '?',
+    svg: '#' + str-replace($name, ' ', '_'),
+  );
+
+  $formats: (
+    otf: 'opentype',
+    ttf: 'truetype',
+  );
+
+  @each $ext in $exts {
+    $extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+    $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+    $src: append($src, url(quote($path + '.' + $extmod)) format(quote($format)), comma);
+  }
+
+  @font-face {
+    font-family: quote($name);
+    font-style: $style;
+    font-weight: $weight;
+    src: $src;
+    font-display: swap; // add this line
+  }
+}
+
+// Primitives
+
+@mixin defaultCard {
+  background-color: $white;
+  border-radius: 12px;
+  padding: 24px;
+  @include mediaSTablet {
+    padding: 20px;
+  }
+}
+
+@mixin ellipsis-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin ellipsis-text-multiline($line-count: 4) {
+  display: -webkit-box;
+
+  -webkit-line-clamp: $line-count;
+  -webkit-box-orient: vertical;
+
+  @include ellipsis-text;
+
+  white-space: initial;
+}
+
+@mixin enable-text-selection {
+  -webkit-touch-callout: default;
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
+
+@mixin disable-text-selection {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE/Edge */
+  user-select: none; /* Стандартный синтаксис */
+}
+
+@mixin scale-typography($properties, $enable-scale: true) {
+  @each $property, $value in $properties {
+    // Пропускаем null-значения
+    @if $value != null {
+      #{$property}: scale-value($value, $enable-scale);
+    }
+  }
+}
+
+@mixin set-typography($properties, $enable-scale: true) {
+  // Список обязательный свойств
+  $required-properties: 'font-size', 'font-size', 'line-height', 'letter-spacing', 'font-family';
+
+  // Проверяем, что все обязательные свойства переданы
+  @each $prop in $required-properties {
+    @if not map.has-key($properties, $prop) {
+      @error "Свойство `#{$prop}` обязательно для передачи в миксин set-typography2.";
+    }
+  }
+
+  // Определяем список свойств, которые нужно масштабировать
+  $scalable-properties: 'font-size', 'line-height';
+
+  @each $property, $value in $properties {
+    @if list.index($scalable-properties, $property) {
+      @include scale-typography(
+        (
+          $property: $value,
+        ),
+        $enable-scale
+      );
+    } @else {
+      #{$property}: $value;
+    }
+  }
+}

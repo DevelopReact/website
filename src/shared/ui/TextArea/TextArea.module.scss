@@ -1,0 +1,93 @@
+.textarea {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  width: 100%;
+  padding: 10px;
+  background: #ccc;
+  border: 2px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 10px;
+  color: #231f20;
+  resize: vertical;
+  min-height: 100px;
+
+  transition:
+    outline 0.1s ease-in-out,
+    border 0.1s ease-in-out;
+
+  &[disabled] {
+    pointer-events: none;
+  }
+
+  &--fluid {
+    max-width: 100%;
+  }
+
+  &::placeholder {
+    font-size: 1rem;
+    color: #909090;
+  }
+
+  &:focus {
+    outline: 2px solid #ccc;
+    border: 2px solid #231f20;
+  }
+
+  &__label {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    color: #838383;
+    margin-bottom: 8px;
+    position: relative;
+    width: max-content;
+
+    &--required::after {
+      content: '*';
+      position: absolute;
+      top: 0;
+      right: -8px;
+      color: red;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+
+    textarea::-webkit-input-placeholder {
+      opacity: 1;
+      transition: opacity 0.3s ease;
+    }
+    textarea::-moz-placeholder {
+      opacity: 1;
+      transition: opacity 0.3s ease;
+    }
+    textarea:-moz-placeholder {
+      opacity: 1;
+      transition: opacity 0.3s ease;
+    }
+    textarea:-ms-input-placeholder {
+      opacity: 1;
+      transition: opacity 0.3s ease;
+    }
+    textarea:focus::-webkit-input-placeholder {
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    textarea:focus::-moz-placeholder {
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    textarea:focus:-moz-placeholder {
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    textarea:focus:-ms-input-placeholder {
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+  }
+}

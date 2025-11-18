@@ -1,0 +1,119 @@
+{
+  "Header": {
+    "services": "Servicios",
+    "case-studies": "Casos de estudio",
+    "products": "Productos",
+    "projects": "Proyectos",
+    "blog": "Blog",
+    "about_us": "Sobre nosotros",
+    "careers": "Carreras"
+  },
+  "Footer": {
+    "user_agreement": "Acuerdo de usuario (Términos del servicio)",
+    "description": "Desarrollamos plugins e integraciones para la automatización BIM",
+    "privacy-policy": "Política de privacidad",
+    "cookie-policy": "Política de cookies",
+    "copyright": "© 2025 Apibim SpA. Todos los derechos reservados",
+    "office": "Reñaca Nte. 265, Viña del Mar, Valparaíso, Chile",
+    "services": "SERVICIOS",
+    "case-studies": "CASOS DE ESTUDIO",
+    "products": "PRODUCTOS",
+    "blog": "BLOG",
+    "about_us": "SOBRE NOSOTROS",
+    "contact_us": "Contáctanos"
+  },
+  "Common": {
+    "brand": "API BIM",
+    "en": "Inglés",
+    "es": "Español",
+    "switchLanguage": "Cambiar idioma"
+  },
+  "Home": {
+    "title": "Bienvenido a API BIM",
+    "description": "Bienvenido a API BIM",
+    "counter": "Valor del contador: {value}",
+    "increment": "Incrementar",
+    "decrement": "Disminuir"
+  },
+  "Blog": {
+    "title": "APIBIM blog",
+    "description": "Mantente al día con las ideas de la plataforma, consejos de desarrollo BIM e historias de automatización de ingeniería de nuestro equipo.",
+    "readMore": "Leer más",
+    "publishedOn": "Publicado el",
+    "by": "Por",
+    "tags": "Etiquetas",
+    "relatedPosts": "Publicaciones relacionadas",
+    "noPostsFound": "No se encontraron publicaciones",
+    "loadMore": "Cargar más"
+  },
+  "SEO": {
+    "title": "API BIM — Starter web moderno",
+    "description": "Bienvenido a API BIM",
+    "ogTitle": "API BIM Starter",
+    "ogDescription": "Comienza tu proyecto con todo incluido.",
+    "blogTitle": "Blog - API BIM",
+    "blogDescription": "Lee nuestros últimos artículos y perspectivas"
+  },
+  "HeroSection": {
+    "title": "Convierte BIM en una herramienta de <green>BENEFICIO</green>, no en un <red>GASTO</red> adicional",
+    "subtitle": "Desarrollamos plugins e integraciones que reducen costos y aumentan la rentabilidad",
+    "button": "Obtén tu solución",
+    "contact": "Contáctanos"
+  },
+  "ContactForm": {
+    "title": "Tus ideas, nuestra experiencia.",
+    "subtitle": "Conectemos",
+    "firstName": "Nombre",
+    "lastName": "Apellido",
+    "companyName": "Nombre de la empresa",
+    "workEmail": "Correo electrónico de trabajo",
+    "message": "Mensaje",
+    "attachFile": "Adjuntar archivo(s)",
+    "attachFileInfo": "Máximo 3 archivos de hasta 5 MB cada uno",
+    "attachFileFormats": "Formatos: doc, docx, pdf, ppt, pptx",
+    "privacyPolicy": "Política de privacidad",
+    "agreeToPrivacyPolicy": "Acepto la",
+    "submitForm": "Enviar",
+    "errors": {
+      "required": "Este campo es obligatorio",
+      "email": "Ingresa una dirección de correo electrónico válida",
+      "fileSize": "El tamaño del archivo no debe superar los 5 MB",
+      "fileType": "Tipo de archivo no válido. Permitidos: doc, docx, pdf, ppt, pptx",
+      "maxFiles": "Se permiten como máximo 3 archivos"
+    },
+    "success": {
+      "title": "¡Gracias!",
+      "message": "Tu mensaje se ha enviado correctamente. Nos pondremos en contacto contigo pronto."
+    }
+  },
+  "TechnologiesSection": {
+    "title": "Usamos tecnologías comprobadas para que tu solución sea confiable",
+    "engineering": "Ingeniería",
+    "it": "TI"
+  },
+  "StagesSection": {
+    "title": "Etapas de la colaboración",
+    "stage1Title": "Identificación de las necesidades clave del negocio",
+    "stage1Description": "En esta etapa nos reunimos con tus especialistas clave, analizamos en profundidad los desafíos actuales y proponemos métodos comprobados para resolverlos. El resultado es un plan de implementación detallado, formulado como requisitos técnicos claros.",
+    "stage2Title": "Inicio del desarrollo",
+    "stage2Description": "Comenzamos diseñando la arquitectura digital: creamos el «plano» de la solución futura. Luego pasamos a la creación de prototipos: desarrollamos y probamos la primera versión funcional, que se convierte en la base para el desarrollo posterior. Es un proceso iterativo: desde los diagramas conceptuales hasta un prototipo tangible.",
+    "stage3Title": "Desarrollo",
+    "stage3Description": "Publicamos regularmente versiones intermedias del producto para que puedas evaluar el avance y dar comentarios a tiempo, manteniendo el proyecto en el rumbo correcto. Cada compilación se vuelve más precisa gracias a tu retroalimentación. No es solo desarrollo, sino co-creación: recogemos continuamente tus comentarios para que el producto final cumpla plenamente tus objetivos de negocio.",
+    "stage4Title": "Documentación",
+    "stage4Description": "En paralelo al desarrollo, creamos un paquete completo de documentación: desde especificaciones técnicas hasta manuales amigables para los usuarios finales. Esto incluye guías paso a paso, ejemplos de uso y respuestas a preguntas frecuentes, asegurando que tu equipo pueda adoptar y utilizar cómodamente la nueva herramienta.",
+    "stage5Title": "Entrega de resultados",
+    "stage5Description": "Al finalizar el desarrollo, te entregamos el plugin definitivo con todos los componentes necesarios: archivos de instalación, documentación técnica y manuales de uso. La integración posterior se adapta completamente a los flujos de trabajo de tu empresa y a tus modelos BIM.",
+    "stage6Title": "Integración. Configuración. Soporte.",
+    "stage6Description": "Cuando el plugin está completamente listo, proporcionamos todo lo necesario para su funcionamiento: paquetes de compilación finales, documentación completa y un año de soporte técnico garantizado. Durante 12 meses, nuestros especialistas corrigen rápidamente cualquier problema detectado y te brindan asistencia técnica.",
+    "contactButton": "¡Contáctanos!"
+  },
+  "OurSolutionsSection": {
+    "title": "Nuestras <em>soluciones</em> son más valiosas si eres...",
+    "item1title": "Estudio de arquitectura o diseño",
+    "item2title": "Gran empresa manufacturera",
+    "item3title": "Empresa manufacturera mediana",
+    "item4title": "Contratista o constructora",
+    "item5title": "Fabricantes de equipamiento",
+    "btn": "Más información ->"
+  }
+}

@@ -1,0 +1,158 @@
+.wrapper {
+  $main: &;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999 !important;
+  display: flex;
+  flex-direction: column;
+  width: calc(var(--vw, 1vw) * 100);
+  height: calc(var(--vh, 1vh) * 100);
+  visibility: hidden;
+  overflow: hidden;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 32px;
+  pointer-events: none;
+
+  @include media(990px) {
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &_toDown {
+    align-items: flex-end;
+  }
+
+  &_open {
+    pointer-events: all;
+    visibility: visible;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #8a5bfd; // Красный цвет с прозрачностью 50%
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0; // Исходное состояние - прозрачный
+    pointer-events: none; // Чтобы элемент не блокировал клики
+  }
+
+  &.filter::before {
+    opacity: 0.2; // Наложение красного фильтра
+  }
+}
+
+.overlay {
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  left: -100px;
+  bottom: -100px;
+  z-index: -1;
+  cursor: pointer;
+  background: var(--color-overlay);
+  opacity: 0;
+}
+
+.body {
+  position: relative;
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  &_full-size {
+    width: 100%;
+    margin: 0 !important;
+    height: 100%;
+
+    @include media(990px) {
+      width: 100%;
+      height: 100%;
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+}
+
+.close {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border-radius: 999px;
+  color: #1b284b;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+
+  &_position {
+    &_relative {
+    }
+
+    &_absolute {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      z-index: 1002;
+
+      @include media(990px) {
+        top: 16px;
+        right: 16px;
+      }
+
+      &_inTop {
+        top: -44px;
+        right: calc(100% - 60px);
+      }
+    }
+  }
+
+  @include hover {
+    background-color: var(--color-box-shadow-focus);
+  }
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
+  min-height: 20px;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  background: #fafafa;
+  box-shadow: -9px 8px 12.5px 0px #0000001a;
+  border-radius: 20px;
+
+  &_full-size {
+    width: 100%;
+    height: 100%;
+    border-radius: 0 !important;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #8a5bfd; // Красный цвет с прозрачностью 50%
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0; // Исходное состояние - прозрачный
+    pointer-events: none; // Чтобы элемент не блокировал клики
+  }
+
+  &.filter::before {
+    opacity: 0.2; // Наложение красного фильтра
+  }
+}

@@ -1,0 +1,161 @@
+$section-gap: 3rem;
+$cards-gap: 2rem;
+$card-padding-block: 2.5rem;
+$card-padding-inline: 2.5rem;
+$card-border-radius: 1.25rem;
+$card-border-width: 0.0625rem;
+$technologies-gap: 1.5rem;
+$icon-size: 3.5rem;
+$icon-size-mobile: 3rem;
+
+.section {
+  width: 100%;
+  background-color: var(--color-white);
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $section-gap;
+}
+
+.sectionTitle {
+  width: 100%;
+  color: var(--color-black);
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-12xl);
+  line-height: var(--line-height-12xl);
+  letter-spacing: var(--letter-spacing-none);
+  text-align: left;
+}
+
+.categories {
+  display: flex;
+  width: 100%;
+  gap: $cards-gap;
+  align-items: stretch;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.categoryCard {
+  width: 100%;
+  flex: 1 1 32rem;
+  padding: $card-padding-block $card-padding-inline;
+  border: $card-border-width solid $blue;
+  border-radius: $card-border-radius;
+  background-color: var(--color-white);
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  transition: none;
+
+  &:hover {
+    transform: none;
+    box-shadow: none;
+  }
+}
+
+.categoryTitle {
+  width: 100%;
+  text-align: center;
+  color: var(--color-text-primary);
+}
+
+.technologiesList {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: $technologies-gap;
+  justify-items: center;
+}
+
+.technologyItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+}
+
+.technologyIcon {
+  position: relative;
+  width: $icon-size;
+  height: $icon-size;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.technologyIcon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.technologyName {
+  color: var(--color-text-secondary);
+}
+
+@media (max-width: 1199px) {
+  .wrapper {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (max-width: 991px) {
+  .categories {
+    flex-direction: column;
+  }
+
+  .categoryCard {
+    flex-basis: auto;
+  }
+
+  .technologiesList {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 767px) {
+  .wrapper {
+    gap: 2.5rem;
+    padding: 0 1.25rem;
+  }
+
+  .categoryCard {
+    padding: 2rem 1.5rem;
+    gap: 2rem;
+  }
+
+  .technologiesList {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
+
+  .technologyIcon {
+    width: $icon-size-mobile;
+    height: $icon-size-mobile;
+  }
+
+  .technologyItem {
+    gap: 0.75rem;
+  }
+}
+
+@media (max-width: 479px) {
+  .wrapper {
+    padding: 0 1rem;
+  }
+
+  .categoryCard {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .technologiesList {
+    gap: 1rem;
+  }
+}

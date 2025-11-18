@@ -1,0 +1,110 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// User model for blog post authors
+model User {
+  id        String     @id @default(cuid())
+  email     String     @unique
+  name      String
+  avatar    String?
+  bio       String?
+  createdAt DateTime   @default(now())
+  updatedAt DateTime   @updatedAt
+  posts     BlogPost[]
+
+  @@map("users")
+}
+
+// Main BlogPost table (language-agnostic)
+model BlogPost {
+  id           String                @id @default(cuid())
+  slug         String                @unique // Base slug, translations can override
+  coverImage   String?
+  published    Boolean               @default(false)
+  createdAt    DateTime              @default(now())
+  updatedAt    DateTime              @updatedAt
+  publishedAt  DateTime?
+  viewCount    Int                   @default(0)
+  authorId     String
+  author       User                  @relation(fields: [authorId], references: [id], onDelete: Cascade)
+  translations BlogPostTranslation[]
+  tags         BlogPostTag[]
+
+  @@index([published, publishedAt(sort: Desc)])
+  @@index([authorId])
+  @@map("blog_posts")
+}
+
+// Translation table for blog posts
+model BlogPostTranslation {
+  id         String   @id @default(cuid())
+  postId     String
+  locale     String   // 'en', 'es', etc.
+  slug       String   // Localized slug
+  title      String
+  excerpt    String?
+  content    String   @db.Text
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+  post       BlogPost @relation(fields: [postId], references: [id], onDelete: Cascade)
+
+  @@unique([postId, locale])
+  @@unique([locale, slug])
+  @@index([locale])
+  @@map("blog_post_translations")
+}
+
+// Main Tag table (language-agnostic)
+model Tag {
+  id           String           @id @default(cuid())
+  slug         String           @unique // Base slug
+  createdAt    DateTime         @default(now())
+  updatedAt    DateTime         @updatedAt
+  translations TagTranslation[]
+  posts        BlogPostTag[]
+
+  @@map("tags")
+}
+
+// Translation table for tags
+model TagTranslation {
+  id        String   @id @default(cuid())
+  tagId     String
+  locale    String   // 'en', 'es', etc.
+  name      String
+  slug      String   // Localized slug
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  tag       Tag      @relation(fields: [tagId], references: [id], onDelete: Cascade)
+
+  @@unique([tagId, locale])
+  @@unique([locale, slug])
+  @@index([locale])
+  @@map("tag_translations")
+}
+
+// Many-to-many relation table for BlogPost and Tag
+model BlogPostTag {
+  postId    String
+  tagId     String
+  createdAt DateTime @default(now())
+  post      BlogPost @relation(fields: [postId], references: [id], onDelete: Cascade)
+  tag       Tag      @relation(fields: [tagId], references: [id], onDelete: Cascade)
+
+  @@id([postId, tagId])
+  @@index([tagId])
+  @@map("blog_post_tags")
+}
